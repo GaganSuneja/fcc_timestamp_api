@@ -11,14 +11,15 @@
 |
 */
 
-$app->get('/', function () use ($app) {
-    return $app->version();
+$app->get('/', function () {
+    echo "Hello this is the timestamp api in accordance to fcc backend development project<br/> created using lumen";
+
 });
 
-$app->get('/{yo}',function ($yo) 
-	{
-		$a = explode("%20",$yo);
-		
-		return $a;
-	});
+
+/*
+yo is our get variable here which api recieves for callback and passes the control 
+to main controller
+*/
+$app->get('/{yo}','Controller@result');
 
