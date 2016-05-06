@@ -12,7 +12,17 @@
 */
 
 $app->get('/', function () {
-    echo "Hello this is the timestamp api in accordance to fcc backend development project<br/> created using lumen";
+    echo "Hello this is the timestamp api in accordance
+     to fcc backend development project<br/> created using lumen <br/><br/><br/><br/><br/><br/><br/><br/>
+
+
+     Do not supply a floating point number as argument it will throw an 404 exception <br/><br/><br/><br/><br/><br/><br/><br/>
+
+
+     Created with <3 by Gagan Suneja
+
+     Github Link 
+     ";
 
 });
 

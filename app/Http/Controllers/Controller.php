@@ -18,10 +18,9 @@ class Controller extends BaseController
 	{
 		$a  = explode("%20",$yo);
 		
-		echo $a;
 		if(count($a)==1)
 		{
-			return $this->timestamped((int)$a[0]);
+			return $this->timestamped($a[0]);
 	 	}
 		else
 		{
@@ -39,10 +38,18 @@ class Controller extends BaseController
 	public function timestamped($a)
 	{
 		date_default_timezone_set('UTC');
-
-		$a = (int)$a;
+ 	
+		$b =  (int)$a;
 		
-		 return json_encode(array("unix"=>$a,"natural"=>date('F j,Y',$a)));
+ 		if($b==0&&strlen($a)>=1)
+ 		{
+ 			return  json_encode(array("unix"=>"null","natural"=>"null"));
+ 		}
+ 		else
+		{
+		    return json_encode(array("unix"=>$a,"natural"=>date('F j,Y',$b)));
+		}
+				
 		
 	}
   
