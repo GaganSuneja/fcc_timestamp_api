@@ -19,9 +19,9 @@ $app->get('/', function () {
      Do not supply a floating point number as argument it will throw an 404 exception <br/><br/><br/><br/><br/><br/><br/><br/>
 
 
-     Created with <3 by Gagan Suneja
+     Created with <3 by Gagan Suneja<br/>
 
-     Github Link 
+     Github Link https://github.com/GaganSuneja/fcc_timestamp_api
      ";
 
 });
